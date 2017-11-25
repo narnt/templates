@@ -34,8 +34,15 @@ a {
 .header__nav li,
 .header__slogan__items li {
     list-style: none;
-    padding: 0 10px;
+    padding: 10px 10px;
     text-align: center;
+    cursor: pointer;
+}
+
+.header__nav li:hover {
+    color: #b27cf5;
+    border-right: solid 1px #b27cf5;
+    padding-right: 9px;
 }
 
 .header__logo {
@@ -80,4 +87,39 @@ a {
 
 .header__slogan__items li {
     flex: 1;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+.header__slogan__items li:nth-child(1) {
+    color: #38c695;
+}
+
+.header__slogan__items li:nth-child(2) {
+    color: #b27cf5;
+}
+
+.header__slogan__items li:nth-child(3) {
+    color: #feb960;
+}
+
+.header__slogan__items li::before {
+    display: block;
+    content: ' ';
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.header__slogan__items li:nth-child(1)::before {
+    background-image: url('images/price.png');
+}
+
+.header__slogan__items li:nth-child(2)::before {
+    background-image: url('images/ontime.png');
+}
+
+.header__slogan__items li:nth-child(3)::before {
+    background-image: url('images/guranteed.png');
 }
